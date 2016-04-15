@@ -1,0 +1,376 @@
+*{
+	outline:none;
+}
+
+body {
+	font-family: Helvetica, Arial, Verdana;
+	background: white;
+	font-size:13px;
+}
+
+
+.container { 
+	position: relative; 
+	width: 960px; 
+	margin: 0 auto; 
+	padding-top: 1.5em;
+	text-align: center;
+	-webkit-transition: all 1s ease;
+  	-moz-transition: all 1s ease;
+  	-o-transition: all 1s ease;
+  	transition: all 1s ease;	
+}
+
+.filtercontainer { 
+	position: relative; 
+	width: 960px; 
+	margin: 0 auto; 
+	padding-top: 13em;
+	text-align: center;
+}
+ 
+#filters {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+	#filters .filter:hover{
+		color: #84CFB8;
+	}
+
+	#filters li {
+		float:left;
+	}
+	
+	#filters li span {
+		display: block;
+		padding:5px 1em;	
+		text-decoration:none;
+		cursor: pointer;
+		color: #8c8c8c;
+	}
+
+	#filters li span.active {
+		color: #84CFB8;
+	}
+ 
+
+ 
+#portfoliolist .portfolio {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	width:30%;
+	margin:1%;
+	display:none;
+	float:left;
+	overflow:hidden;
+}
+
+	.portfolio-wrapper {
+		overflow:hidden;
+		position: relative !important;
+		background: #666;
+		cursor:pointer;
+	}
+
+	.portfolio img {
+		max-width:100%;
+		position: relative;
+	}
+	
+	.portfolio .label {
+		position: absolute;
+		width: 100%;
+		height:40px;
+		bottom:-40px;
+	}
+
+		.portfolio .label-bg {
+			background: #333333;
+			width: 100%;
+			height:100%;
+			position: absolute;
+			top:0;
+			left:0;
+		}
+	
+		.portfolio .label-text {
+			color:#fff;
+			position: relative;
+			z-index:500;
+			padding:5px 8px;
+		}
+			
+			.portfolio .text-category {
+				display:block;
+				font-size:9px;
+			}
+	
+	
+	
+
+
+
+/* #Tablet (Portrait) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.container {
+		width: 768px; 
+	}
+}
+
+
+/*  #Mobile (Portrait) - Note: Design for a width of 320px */
+@media only screen and (max-width: 767px) {
+	.container { 
+		width: 95%; 
+	}
+	
+	#portfoliolist .portfolio {
+		width:48%;
+		margin:1%;
+	}		
+
+	#ads {
+		display:none;
+	}
+	
+}
+
+
+/* #Mobile (Landscape) - Note: Design for a width of 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.container {
+		width: 70%;
+	}
+	
+	#ads {
+		display:none;
+	}
+	
+}
+
+/* #Clearing */
+
+/* Self Clearing Goodness */
+.container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+.row:after,
+.clearfix:after {
+  clear: both; }
+.row,
+.clearfix {
+  zoom: 1; }
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/*Navigation*/
+/*nav {
+  padding: 20px 0 30px 0;
+  font-size: 16px;
+}
+nav .navbar-right {
+  float: right;
+  margin-right:5%;
+}
+nav ul li {
+  display: inline;
+  padding-left: 20px;
+}
+nav ul li a {
+  color: #ee5656;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: #84CFB8;
+}*/
+
+
+.content-wrap {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.navcontainer {
+	background: white;
+}
+
+.menu-wrap a {
+	color: white;
+}
+
+.menu-wrap a:hover,
+.menu-wrap a:focus {
+	color: black;
+}
+
+.content-wrap {
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	-webkit-transition: -webkit-transform 0.4s;
+	transition: transform 0.4s;
+	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+.content {
+	position: relative;
+	background: #b4bad2;
+	padding-bottom: 12em;
+}
+
+/* Common styles for menu button and menu-wrap */
+.menu-button{
+	position: fixed;
+	width: 3.5em;
+	height: 3.5em;
+	font-size: 1.5em;
+	-webkit-transform: translate3d(1.5em,1.5em,0);
+	transform: translate3d(1.5em,1.5em,0);
+}
+
+.menu-wrap {
+	position: fixed;
+	width: .2em;
+	height: .2em;
+	font-size: 1.5em;
+	-webkit-transform: translate3d(1.5em,1.5em,0);
+	transform: translate3d(1.5em,1.5em,0);
+}
+
+/* Menu Button */
+.menu-button {
+	z-index: 1000;
+	position:fixed;
+	margin: 0;
+	padding: 0;
+	border: none;
+	text-indent: 2.5em;
+	color: transparent;
+	background-color: transparent;
+	background-image: url(../img/logo-01.png);
+	background-size: 3.5em;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.menu-button::before {
+	position: fixed;
+	top: 0.5em;
+	right: 0.5em;
+	bottom: 0.5em;
+	left: 0.5em;
+	content: '';
+}
+
+.menu-button:hover {
+	opacity: 0.8;
+}
+
+/* Menu */
+.menu-wrap {
+	z-index: 999;
+	background: #ea5655;
+	-webkit-transition: width 0.4s, height 0.4s, -webkit-transform 0.4s;
+	transition: width 0.4s, height 0.4s, transform 0.4s;
+	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+.menu {
+	height: 100%;
+	overflow: hidden;
+	font-size: 0.75em;
+}
+
+.icon-list {
+	float: right;
+	padding: 3em 2em 0 6em;
+}
+
+.icon-list a {
+	opacity: 0;
+	display: inline-block;
+	padding: 0 0.2em;
+	margin: 0 15px;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+.icon-list a span {
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 0.5em;
+	font-weight: 700;
+	padding-top: 0.5em;
+}
+
+@media screen and (max-width: 50em) {
+	.icon-list a {
+		padding: 1em 0em;
+		margin: 0 5px;
+		font-size: 1em;
+	}
+	.icon-list a span {
+		display: none;
+	}
+}
+
+/* Shown menu */
+.show-menu .content-wrap {
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+	-webkit-transform: translate3d(0,125px,0);
+	transform: translate3d(0,125px,0);
+}
+
+.show-menu .menu-wrap {
+	width: 100%;
+	height: 7em;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+.show-menu .menu-button{
+	background-color: white;
+    -webkit-mask-image: url(../logo-01.png);
+    mask-image: url(../logo-01.png);
+}
+
+.show-menu .icon-list a {
+	opacity: 1;
+	-webkit-transition: opacity 0.4s 0.4s;
+	transition: opacity 0.4s 0.4s;
+}
+
+.show-menu .icon-list a:nth-child(2) {
+	-webkit-transition-delay: 0.42s;
+	transition-delay: 0.42s;
+}
+
+.show-menu .icon-list a:nth-child(3) {
+	-webkit-transition-delay: 0.44s;
+	transition-delay: 0.44s;
+}
